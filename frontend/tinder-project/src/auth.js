@@ -10,7 +10,7 @@ export function useLogout() {
     
     async function logout() {
         try {
-            await apiFetch('http://localhost:3000/logout', { 
+            await apiFetch('https://tinder-app-smoky.vercel.app/logout', { 
                 method: 'POST' 
             });
             
