@@ -46,7 +46,7 @@ async function registerUser() {
             formData.append('photos', file);
         }
 
-        const response = await apiFetch('http://localhost:3000/register', {
+        const response = await apiFetch('https://tinder-app-smoky.vercel.app/register', {
             method: 'POST',
             body: formData
         });
