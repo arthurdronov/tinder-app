@@ -6,7 +6,7 @@ import { isLoggedIn, userProfile } from './auth.js'
 
 async function initializeApp() {
     try {
-        const response = await apiFetch('http://localhost:3000/me');
+        const response = await apiFetch('https://tinder-app-smoky.vercel.app/me');
         
         if (response.ok) {
             isLoggedIn.value = true;
