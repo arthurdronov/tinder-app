@@ -7,7 +7,7 @@ const matches = ref([])
 
 onMounted(async () => {
     try {
-        const response = await apiFetch('http://localhost:3000/matches');
+        const response = await apiFetch('https://tinder-app-smoky.vercel.app/matches');
         if (response.ok) {
             const data = await response.json();
             matches.value = data.matches;
