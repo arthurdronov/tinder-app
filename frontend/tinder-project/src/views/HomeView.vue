@@ -16,7 +16,7 @@ const currentProfile = computed(() => {
 
 onMounted(async () => {
     try {
-        const response = await apiFetch('http://localhost:3000/candidates');
+        const response = await apiFetch('https://tinder-app-smoky.vercel.app/candidates');
         if (response.ok) {
             candidates.value = await response.json();
         }
@@ -48,7 +48,7 @@ async function like() {
     try {
         const targetProfileId = currentProfile.value._id;
 
-        const response = await apiFetch('http://localhost:3000/like', {
+        const response = await apiFetch('https://tinder-app-smoky.vercel.app/like', {
             method: 'POST',
             body: JSON.stringify({ targetProfileId })
         });
