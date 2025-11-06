@@ -53,7 +53,7 @@ async function saveProfile() {
             formData.append('photos', file);
         }
 
-        const response = await apiFetch('http://localhost:3000/profile', {
+        const response = await apiFetch('https://tinder-app-smoky.vercel.app/profile', {
             method: 'PUT',
             body: formData
         });
@@ -76,7 +76,7 @@ async function setMainPhoto(photoUrl) {
         alerta.value = "";
         sucesso.value = "";
 
-        const response = await apiFetch('http://localhost:3000/profile/photos/set-main', {
+        const response = await apiFetch('https://tinder-app-smoky.vercel.app/profile/photos/set-main', {
             method: 'PUT',
             body: JSON.stringify({ photoUrl })
         });
