@@ -13,7 +13,7 @@ const router = useRouter()
 
 async function authUserLogin() {
   try {
-    var response = await apiFetch('http://localhost:3000/login', {
+    var response = await apiFetch('https://tinder-app-smoky.vercel.app/login', {
       method: "POST",
       body: JSON.stringify({
         email: postEmail.value,
