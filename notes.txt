@@ -1,0 +1,18 @@
+frontend: 
+	welcome, OK
+	create account, OK
+	login, OK
+	likes and interests (opcional),
+	home, OK
+	users, OK
+	match, OK
+	datting matches OK
+
+backend:
+	criação usuário OK,
+	autenticação usuário, OK
+	sessão usuário, OK
+	relacionamento de usuários, OK
+	chat de usuários, 
+	match de usuários, OK
+
