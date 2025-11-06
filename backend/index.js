@@ -45,7 +45,7 @@ const PORT = process.env.PORT || 3000
 app.use(express.json())
 // Habilita o servidor a devolver na response o Access-Control-Allow-Credentials header para utilizar sessões e autenticações
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://10.0.0.105:5173', 'http://10.0.2.15:5173'],
+    origin: true,
     credentials: true
 }))
 
