@@ -40,7 +40,7 @@ function calculateAge(dob) {
 }
 
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 // Habilita o servidor a devolver na response o Access-Control-Allow-Credentials header para utilizar sessões e autenticações
