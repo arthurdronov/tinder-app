@@ -179,7 +179,7 @@ async function startServer() {
                     return res.status(400).json({ Message: "Este email já está em uso." });
                 }
 
-                const photoUrls = req.files.map(file => `http://localhost:3000/uploads/${file.filename}`);
+                const photoUrls = req.files.map(file => `https://tinder-app-smoky.vercel.app/${file.filename}`);
 
                 const newUser = await User.create({
                     email,
@@ -431,7 +431,7 @@ async function startServer() {
                 const updateOperation = { $set: updates };
 
                 if (req.files && req.files.length > 0) {
-                    const newPhotoUrls = req.files.map(file => `http://localhost:3000/uploads/${file.filename}`);
+                    const newPhotoUrls = req.files.map(file => `https://tinder-app-smoky.vercel.app/uploads/${file.filename}`);
                     updateOperation.$push = { photos: { $each: newPhotoUrls } };
                 }
 
